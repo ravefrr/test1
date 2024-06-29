@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HWID Protected Download</title>
+    <script>
+        function checkHWID() {
+            const allowedHWID = '75F5A4CD-2ABD-4DAA-AC2F-44E63239FD43';
+            const enteredHWID = document.getElementById('hwidInput').value;
+            if (enteredHWID === allowedHWID) {
+                window.location.href = 'https://fv5-2.failiem.lv/down.php?i=4a8cgsar9e';
+            } else {
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Enter HWID to Download</h1>
+    <input type="text" id="hwidInput" placeholder="Enter your HWID here">
+    <button onclick="checkHWID()">Submit</button>
+    <p id="errorMessage" style="display:none; color: red;">Invalid HWID. Access denied.</p>
+</body>
+</html>
